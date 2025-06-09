@@ -103,11 +103,22 @@
 ## 桌面端使用
 
 点击[这里](https://github.com/litongjava/tauri-translator/releases/)下载客户端 安装使用
-## Telegram 机器人
+## 部署
 
-1. 打开 [@litongjava_bot](https://t.me/litongjava_bot)  
-2. 点击 `Start`（或发送 `/start` 命令）  
-3. 直接发送要翻译的文本，即可获得中英文互译结果
+```sh
+git clone https://github.com/litongjava/java-native-media.git
+cd java-native-media/
+mvn clean install -DskipTests -Dgpg.skip
+cd ..
+
+git clone https://github.com/litongjava/ai-agent.git
+cd java-native-media/
+mvn clean package -DskipTests -Dgpg.skip
+cd ..
+
+git clone https://github.com/litongjava/ai-translator-backend.git
+cd ai-translator-backend
+```
 
 ## 贡献指南
 
