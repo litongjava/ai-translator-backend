@@ -118,6 +118,12 @@ cd ..
 
 git clone https://github.com/litongjava/ai-translator-backend.git
 cd ai-translator-backend
+mvn clean package -DskipTests -Dgpg.skip -Pproduction
+```
+
+```
+vi .env
+JDBC_PSWD=
 ```
 
 ## 贡献指南
